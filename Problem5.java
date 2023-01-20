@@ -10,12 +10,13 @@ public class Problem5 {
 		System.out.println("Enter the String");
 		String inputString = scanner.nextLine();
 		inputString = inputString.toLowerCase();
+		
 		//System.out.println(inputString);
 		
 		System.out.println("Enter the reference String");
 		String refString = scanner.nextLine();
 		refString=refString.toLowerCase();
-		
+		int []finalCount = new int[refString.length()];
 		if(refString.length()==0) {
 			System.out.println("Reference String is empty");
 		}
@@ -29,11 +30,14 @@ public class Problem5 {
 				}
 				referIndex++;
 			}
-			System.out.println(refString.charAt(index)+" : "+ count);
+			//System.out.println(refString.charAt(index)+" : "+ count);
+			finalCount[index]=count;
 			
 		}
 		
-		
+		for(int index=0;index<refString.length();index++) {
+			System.out.println(refString.charAt(index)+" : "+finalCount[index]);
+		}
 		
 
 	}
